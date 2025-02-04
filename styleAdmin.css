@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+/* General */
+html, body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Header */
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    padding: 5px 2%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 1.5s;
+    z-index: 5;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgb(13, 32, 53); /* Fondo oscuro cuando hace scroll */
+    padding: 10px 20px; /* Reducir padding al hacer scroll */
+}
+
+header .logo {
+    position: relative;
+    width: 6vw;
+}
+
+nav {
+    display: flex;
+}
+
+header ul li a:hover {
+    color: orange;
+}
+
+header ul {
+    display: flex;
+    margin: 0;
+    position: relative;
+}
+
+header ul li {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0 10px;
+}
+
+header ul li a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.05vw;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.cerrarSesion {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.05vw;
+    margin: 0 10px;
+    width: 100%;
+}
+
+.cerrarSesion:hover {
+    color: orange;
+}
+
+/* Contenedor de título */
+.contenedorTitulo {
+    align-items: center;
+    background: url("/img/fondo3.png");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: center;
+    overflow: hidden;
+    padding: 1px;
+    position: relative;
+    text-align: center;
+}
+
+.contenedorTitulo::before {
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.contenedorTitulo h1, h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 0px;
+    position: relative;
+    z-index: 2;
+}
+
+h2 {
+    font-size: 1.7rem;
+    margin-top: 30px;
+}
+
+/* Barra de agregar valor */
+.barraAgregarValor {
+    background: rgba(0, 0, 0, 0.13);
+    display: flex;
+    justify-content: center;
+    padding: 2vh;
+    text-align: center;
+}
+
+#ingresaDescripcion {
+    border: 0px;
+    border-radius: 5px;
+    margin-right: 1vw;
+    padding: 10px;
+    width: 50%;
+}
+
+#boton {
+    color: green;
+    padding: 10px 5px;
+    width: 45px;
+}
+
+/* Contenedor principal */
+.contenedor {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 85%;
+}
+
+/* Tabla de registros */
+table {
+    border-collapse: collapse;
+    margin: 10px;
+    margin-bottom: 50px;
+    text-align: left;
+    width: 60vw;
+}
+
+#tablaRegistros th {
+    color: rgb(13, 151, 142);
+    text-align: left;
+}
+
+tr:hover {
+    background-color: rgba(0, 0, 0, 0.178);
+    margin: 0;
+}
+
+td {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+}
+
+.tiempo {
+    text-align: end;
+}
+
+.eliminar {
+    color: red;
+    display: none;
+}
+
+tr:hover .eliminar {
+    display: flex;
+    margin: 0;
+}
+
+td > a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    align-items: center;
+    background-color: #0D2035;
+    bottom: 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    padding: 10px 2.5vw;
+    position: fixed;
+    right: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left-section {
+    font-size: 14px;
+}
+
+.right-section a {
+    color: #fff;
+    margin-left: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+    table {
+        width: auto;
+    }
+
+    section {
+        padding-bottom: 35px;
+    }
+}
+

@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+/* Ajustes generales */
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 10px;
+    width: 100%;
+}
+
+body::before {
+    background: url("/img/fondo3.png");
+    background-position: center;
+    background-size: cover;
+    content: "";
+    filter: brightness(30%);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+/* Barra de navegación */
+.navbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.navbar img {
+    height: 100px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: orange;
+}
+
+#main-header {
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10vw;
+    position: fixed;
+    top: 0;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    width: 100%;
+    z-index: 2;
+}
+
+#main-header.scrolled {
+    background-color: rgba(13, 32, 53, 0.9);
+    padding: 10px 20px;
+}
+
+#logo {
+    height: 80px;
+    transition: height 0.3s ease;
+}
+
+/* Contenido principal */
+.wrapper {
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    max-width: 400px;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.texto {
+    color: #fff;
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    border-bottom: 2px solid #ccc;
+    margin: 15px 0;
+    position: relative;
+}
+
+.input-field input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    height: 40px;
+    outline: none;
+    width: 100%;
+}
+
+.input-field input:focus~label,
+.input-field input:valid~label {
+    font-size: 0.8rem;
+    top: 10px;
+    transform: translateY(-120%);
+}
+
+.input-field label {
+    color: #fff;
+    font-size: 16px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.15s ease;
+}
+
+button {
+    background: #fff;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 20px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+    color: #fff;
+}
+
+/* Mensajes de error y estilos adicionales */
+.error {
+    color: rgb(255, 81, 81);
+    margin-top: 20px;
+}
+
+.escondido {
+    display: none;
+}
+
+.register {
+    text-align: center;
+    margin: 30px;
+    color: #fff;
+    p a {
+        color: white;
+    }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        height: 60px;
+    }
+}

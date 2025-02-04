@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración</title>
+    <link rel="stylesheet" href="styleAdmin.css">
+    <script src="admin.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="https://www.umss.edu.bo/" target="_blank"><img class="logo" src="img/logoUmss.png"></a>
+		<nav>
+			<ul>
+				<li><a class="botonRegistro" href="/register.html">Nueva cuenta</a></li>
+                <button class="cerrarSesion">Cerrar sesión</button>
+			</ul>
+		</nav>
+    </header>
+    <div class="contenedorTitulo">
+        <h1>Escuela de conduccion Virtual</h1>
+        <h1>San Simon</h1>
+        <h2>Registro de usuarios</h2>
+    </div>
+    <main>
+        <section class="barraAgregarValor">
+            <input type="texto" id="ingresaDescripcion" placeholder="Agregar cliente"/>
+            <div id="boton" onclick="agregar()"><ion-icon name="checkmark-circle-outline"></ion-icon></div>
+        </section>
+        <div class="contenedor">
+            <section class="tablaRegistros">
+                <table id="tablaRegistros">
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="left-section">
+                <span>Simulador de conducción © 2024 - Desarrollado por Kimberly Zambrana y Javier Flores</span>
+            </div>
+            <div class="right-section">
+                <a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="https://www.instagram.com/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></ion-icon></a>
+                <a href="https://www.linkedin.com/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href="https://www.youtube.com/" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+                <a href="https://telegram.org/" target="_blank"><ion-icon name="paper-plane-outline"></ion-icon></a>
+                <a href="https://www.tiktok.com/" target="_blank"><ion-icon name="logo-tiktok"></ion-icon></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+</body>
+</html>

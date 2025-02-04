@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styleIndex.css"/>
+  <script src="index.js"></script>
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <div class="navbar" id="main-header">
+    <img src="img/logoUmss.png" alt="UMSS" id="logo">
+    <ul>
+      <li><a href="#">Promociones</a></li>
+      <li><a href="login.html">Administración</a></li>
+    </ul>
+  </div>
+
+  <!-- Header con video de fondo -->
+  <header>
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="img/Video.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de videos.
+      </video>
+  </header>
+
+
+
+  <section class="news-section">
+    <h2 class="serviciosh2" >Nuestros Servicios</h2>
+    <div class="news-container">
+        <!-- Tarjeta de noticia 1 -->
+        <div class="news-card">
+            <img src="img/imagen1.png" alt="imagen1">
+            <div class="news-info">
+                <h3>Curso para principiantes</h3>
+                <button>Leer más</button>
+            </div>
+        </div>
+        <!-- Tarjeta de noticia 2 -->
+        <div class="news-card">
+            <img src="img/imagen2-libro.jpg" alt="imagen2">
+            <div class="news-info">
+                <h3>Curso teórico</h3>
+                <button>Leer más</button>
+            </div>
+        </div>
+        <!-- Tarjeta de noticia 3 -->
+        <div class="news-card">
+            <img src="img/fondo3.png" alt="imagen3">
+            <div class="news-info">
+                <h3>Simulador virtual</h3>
+                <button>Leer más</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="contact-section">
+      <div class="contact-container">
+          <!-- Información de contacto -->
+          <div class="contact-info">
+            <h2>Proyecto Elektro</h4>
+            <h3>Información de Contacto</h3>
+            <p><ion-icon name="call-outline"></ion-icon> N° de celular: 78500501 - 69010012</p>
+            <p><ion-icon name="mail-outline"></ion-icon> E-mail: info@conduccion.com</p>
+            <p><ion-icon name="alarm-outline"></ion-icon> Horario de atención:</p>
+            <p class="alejar">Lunes - Viernes: 07:00am a 18:00pm </p>
+            <p class="alejar">Sábado: 09:00am a 12:30pm</p>
+            <p class="alejar">Domingo: Cerrado</p>
+          </div>
+
+          <!-- Formulario de contacto -->
+          <form class="contact-form">
+              <label for="name">Nombre </label>
+              <input type="text" id="name" name="name" placeholder="Nombres" required>
+
+              <label for="subject">Asunto</label>
+              <input type="text" id="subject" name="subject" placeholder="Asunto">
+
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" placeholder="Mensaje"></textarea>
+
+              <button type="submit" id="enviar">Enviar<ion-icon name="logo-whatsapp"></ion-icon></button>
+          </form>
+      </div>
+  </section>
+
+
+
+  <footer>
+    <div class="footer-container">
+        <div class="left-section">
+            <span>Simulador de conducción © 2024 - Desarrollado por Kimberly Zambrana y Javier Flores</span>
+        </div>
+        <div class="right-section">
+            <a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.instagram.com/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></ion-icon></a>
+            <a href="https://www.linkedin.com/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="https://www.youtube.com/" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+            <a href="https://telegram.org/" target="_blank"><ion-icon name="paper-plane-outline"></ion-icon></a>
+            <a href="https://www.tiktok.com/" target="_blank"><ion-icon name="logo-tiktok"></ion-icon></a>
+        </div>
+    </div>
+  </footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>

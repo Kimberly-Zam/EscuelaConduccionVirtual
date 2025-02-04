@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión</title>
+  <link rel="stylesheet" href="styleLogin-Register.css">
+  <script src="login.js" defer></script>
+</head>
+<body>
+  <div class="navbar" id="main-header">
+    <img src="img/logoUmss.png" alt="UMSS" id="logo">
+    <ul>
+      <li><a href="/index.html">Inicio</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <div class="wrapper">
+      <h1>Iniciar sesión</h1>
+      <p class="texto">Ingresá tus credenciales para acceder al área de administración.</p>
+      <form id="login-form">
+        <div class="input-field">
+          <input type="text" name="user" id="user" placeholder="Nombre de usuario">
+          <label for="user" class="sr-only">Usuario</label>
+        </div>
+        <div class="input-field">
+          <input type="password" name="password" id="password" placeholder="Contraseña">
+          <label for="password" class="sr-only">Contraseña</label>
+        </div>
+        <button type="submit">Iniciar sesión</button>
+        <p class="error escondido">Error al iniciar sesión</p>
+        </form>
+    </div>
+  </main>
+</body>
+</html>

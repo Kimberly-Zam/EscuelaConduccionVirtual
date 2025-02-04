@@ -1,0 +1,414 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+/* Ajustes generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    font-family: "Open Sans", sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+/* Barra de navegación */
+.navbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.navbar img {
+    height: 100px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: orange;
+}
+
+#main-header {
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 4vw;
+    position: fixed;
+    top: 0;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    width: 100%;
+    z-index: 2;
+}
+
+#main-header.scrolled {
+    background-color: rgba(13, 32, 53, 0.9);
+    padding: 10px 20px;
+}
+
+#logo {
+    height: 100px;
+    transition: height 0.3s ease;
+}
+
+#main-header.scrolled #logo {
+    height: 60px;
+}
+
+/* Header con video de fondo */
+header {
+    height: 94vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.video-container {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+video {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+/* Sección de noticias */
+.news-section {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.news-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.news-container {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.news-card {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.089);
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 29vw;
+}
+
+.news-card img {
+    filter: blur(1.5px);
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.news-info {
+    background-color: rgba(0, 0, 0, 0.733);
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    position: relative;
+    width: 80%;
+}
+
+.news-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.news-info button {
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+}
+
+.news-info button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+/* Sección de contacto */
+.contact-section {
+    background-color: #f8f8f8;
+    margin: 50px 0 20px;
+    padding: 20px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.contact-info {
+    align-items: flex-start;
+    background-color: #fcd2a1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    width: 45%;
+}
+
+.contact-info h2 {
+    align-self: center;
+    border-bottom: #0D2035 1px solid;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    margin-bottom: 10px;
+    text-align: start;
+}
+
+.contact-info p ion-icon {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.alejar {
+    margin-left: 30px;
+}
+
+.contact-form {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.contact-form label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-form button {
+    align-self: center;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: darkgreen;
+}
+
+#enviar {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#enviar ion-icon {
+    margin-left: 10px;
+}
+
+/* Pie de página */
+footer {
+    align-items: center;
+    background-color: #0D2035;
+    bottom: 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    padding: 10px 2.5vw;
+    position: fixed;
+    right: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left-section {
+    font-size: 14px;
+    text-align: start;
+}
+
+.right-section a {
+    color: #fff;
+    margin-left: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        height: 50vh;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .navbar ul li a {
+        font-size: 0.9rem;
+    }
+    
+    #logo {
+        height: 50px;
+    }
+
+    .news-container {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .news-card, .more-news {
+        width: 90%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+    }
+
+    .contact-section {
+        margin: 20px 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 29vh;
+
+    }
+
+    #logo {
+        height: 35px;
+    }
+
+    #main-header {
+        padding: 10px 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .navbar ul li a {
+        font-size: 0.8rem;
+    }
+
+    .navbar img {
+        height: 30px;
+    }
+
+    .header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .news-section .serviciosh2 {
+        font-size: 1.3rem;
+        
+    }
+
+    .news-info h3 {
+        font-size: 0.9rem;
+    }
+
+    .news-section {
+        font-size: 1.5rem;
+    }
+
+    .news-card, .more-news {
+        height: 200px;
+        width: 95%;
+    }
+
+    .contact-section {
+        margin: 20px 0 70px;
+    }
+}

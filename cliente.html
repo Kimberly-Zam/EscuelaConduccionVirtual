@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente</title>
+    <link rel="stylesheet" href="styleCliente.css">
+    <script src="admin.js" defer></script>
+    <script src="cliente.js"></script>
+</head>
+<body>
+    <header>
+        <a href="https://www.umss.edu.bo/" target="_blank"><img class="logo" src="img/logoUmss.png"></a>
+		<nav>
+			<ul>
+				<li><a class="botonAdmin" href="/admin.html">Inicio</a></li>
+                <button class="cerrarSesion">Cerrar sesión</button>
+			</ul>
+		</nav>
+    </header>
+
+    <main>
+        <!-- Título con el nombre del cliente -->
+        <h1 id="nombre-usuario">Nombre del Cliente</h1>
+        <p>Plan: <span id="plan-usuario"></span></p>
+
+        <!-- Navegación entre pestañas -->
+        <div class="tabs">
+            <button class="tab active" onclick="mostrarPestaña('informacion')">Información</button>
+            <button class="tab" onclick="mostrarPestaña('historial')">Historial</button>
+            <button class="tab" onclick="mostrarPestaña('observaciones')">Observaciones</button>
+        </div>
+
+        <!-- Contenido de la pestaña Información -->
+        <div id="informacion" class="contenido-pestaña active">
+            <table>
+                <tr>
+                    <th>Nombre Completo</th>
+                    <td class="iconoPencilDerecha"><span id="nombre-completo"></span><a href="#" onclick="editarCampo('nombre-completo')"><ion-icon name="brush-outline"></ion-icon></a></td>
+                    <th class="separacionColumna">Edad</th>
+                    <td class="iconoPencilDerecha"><span id="edad-usuario"></span><a href="#" onclick="editarCampo('edad-usuario')"><ion-icon name="brush-outline"></ion-icon></a></td>
+                </tr>
+                <tr>
+                    <th>Dirección</th>
+                    <td class="iconoPencilDerecha"><span id="direccion-usuario"></span><a href="#" onclick="editarCampo('direccion-usuario')"><ion-icon name="brush-outline"></ion-icon></a></td>
+                    <th class="separacionColumna">Número de celular</th>
+                    <td class="iconoPencilDerecha"><span id="telefono-usuario"></span><a href="#" onclick="editarCampo('telefono-usuario')"><ion-icon name="brush-outline"></ion-icon></a></td>
+                </tr>
+                <tr>
+                    <th>Plan</th>
+                    <td class="iconoPencilDerecha"><span id="plan-detalle"></span><a href="#" onclick="editarCampo('plan-detalle')"><ion-icon name="brush-outline"></ion-icon></a></td>
+                </tr>
+            </table>
+            <div class="button-container">
+                <button onclick="guardarDatos()">Guardar</button>
+            </div>
+        </div>
+
+        <!-- Contenido de la pestaña Historial -->
+        <div id="historial" class="contenido-pestaña">
+            <div class="historial-acciones">
+                <button onclick="iniciarSesion()">Iniciar Sesión</button>
+                <button onclick="terminarSesion()">Terminar Sesión</button>
+            </div>
+            <h2>Historial de uso</h2>
+            <table id="tablaHistorial">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Inicio</th>
+                        <th>Finalización</th>
+                        <th>Duración</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los registros se mostrarán aquí -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Contenido de las otras pestañas (vacío por ahora) -->
+        <div id="observaciones" class="contenido-pestaña">
+            <h2>Observaciones</h2>
+            <table id="tablaObservaciones">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Observaciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Las observaciones se insertarán aquí desde JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="left-section">
+                <span>Simulador de conducción © 2024 - Desarrollado por Kimberly Zambrana y Javier Flores</span>
+            </div>
+            <div class="right-section">
+                <a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="https://www.instagram.com/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></ion-icon></a>
+                <a href="https://www.linkedin.com/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href="https://www.youtube.com/" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+                <a href="https://telegram.org/" target="_blank"><ion-icon name="paper-plane-outline"></ion-icon></a>
+                <a href="https://www.tiktok.com/" target="_blank"><ion-icon name="logo-tiktok"></ion-icon></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>
